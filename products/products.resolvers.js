@@ -5,5 +5,8 @@ module.exports = {
     products: () => {
       return productsModel.getAllProducts();
     },
+    productsByPrice: (parent, args) => {
+      return productsModel.getProductsByPrice(args.min, args.max);
+    },
   },
 };
